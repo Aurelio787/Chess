@@ -2,34 +2,39 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schachspiel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rechner</title>
+    <link rel="stylesheet" href="final.css">
+    <link rel="icon" type="images/jpg" href="Download.png">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Schach</h1>
-        
-        <div id="brett-wrapper">
-            <div id="schachbrett"></div>
+    <div class="calculator" >
+        <input type="text" id="alfred" value="0" readonly>
 
-            <div id="start-menu" class="overlay">
-                <div class="overlay-content">
-                    <h2>Schachspiel</h2>
-                    <p>Fordere die KI heraus!</p>
-                    <button id="start-button">Spiel Starten</button>
-                </div>
-            </div>
-
-            <div id="end-screen" class="overlay hidden">
-                <div class="overlay-content">
-                    <h2 id="end-message">Spiel vorbei</h2>
-                    <button id="restart-button">Nochmal spielen</button>
-                </div>
-            </div>
+        <div class="buttons">
+            <button id="button7">7</button>
+            <button id="button8">8</button>
+            <button id="button9">9</button>
+            <button id="buttonDIVIDE">/</button>
         </div>
+        <div class="buttons">
+            <button id="button4">4</button>
+            <button id="button5">5</button>
+            <button id="button6">6</button>
+            <button id="buttonMULTIPLY">*</button>
+        </div>
+        <div class="buttons">
+            <button id="button1">1</button>
+            <button id="button2">2</button>
+            <button id="button3">3</button>
+            <button id="buttonMINUS">-</button>
+        </div>
+        <div class="buttons">
+            <button id="buttonClear">C</button>    
+            <button id="button0">0</button>    
+            <button id="Gleich">=</button>
+            <button id="buttonPLUS">+</button>
+        </div>            
     </div>
-
-    <script src="script.js"></script>
+    <script src="finalRechner.js"></script>
 </body>
 </html>
