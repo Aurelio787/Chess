@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schachspiel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Schach</h1>
+        
+        <div id="brett-wrapper">
+            <div id="schachbrett"></div>
+
+            <div id="start-menu" class="overlay">
+                <div class="overlay-content">
+                    <h2>Schachspiel</h2>
+                    <p>Fordere die KI heraus!</p>
+                    <button id="start-button">Spiel Starten</button>
+                </div>
+            </div>
+
+            <div id="end-screen" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="end-message">Spiel vorbei</h2>
+                    <button id="restart-button">Nochmal spielen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
