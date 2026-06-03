@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#brett-wrapper {
+    position: relative; /* Wichtig, damit sich Overlays daran ausrichten */
+    width: 560px;
+    height: 560px;
+}
+
+#schachbrett {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    border: 4px solid #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.feld {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.weiss { background-color: #f0d9b5; }
+.schwarz { background-color: #b58863; }
+.ausgewaehlt { background-color: #7bc17b !important; }
+
+/* Die Menü-Überlagerungen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Halbtransparenter Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.overlay h2 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+}
+
+.overlay p {
+    margin: 0 0 20px 0;
+    color: #ccc;
+}
+
+.overlay button {
+    background-color: #7bc17b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.overlay button:hover {
+    background-color: #62a362;
+}
+
+/* Unsichtbar-Klasse für die Steuerung per JS */
+.hidden {
+    display: none !important;
+}
